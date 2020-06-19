@@ -3,7 +3,7 @@ package Modelo;
 
 /**
  *
- * @author jhonn
+ * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
 public class Recepcionista extends Persona {
 

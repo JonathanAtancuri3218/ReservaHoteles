@@ -7,7 +7,7 @@ package Modelo;
 
 /**
  *
- * @author jhonn
+ * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
 public class Gerente extends Persona{
     private String codigo_gerente;

@@ -13,7 +13,7 @@ import java.util.TreeMap;
 
 /**
  *
- * @author jhonn
+ * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
 public class ControladorPersona {
   private List<Persona> listaPersona;
