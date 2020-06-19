@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import scm.modelo.Usuario;
 
 /**
  *
