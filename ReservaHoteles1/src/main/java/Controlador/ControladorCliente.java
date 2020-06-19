@@ -5,7 +5,8 @@
  */
 package Controlador;
 
-import Modelo.Persona;
+
+import Modelo.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
@@ -15,28 +16,29 @@ import java.util.TreeMap;
  *
  * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
-public class ControladorPersona {
-  private List<Persona> listaPersona;
+public class ControladorCliente {
+  private List<Cliente> listaCliente;
 
-    public ControladorPersona() 
+    public ControladorCliente() 
     {
-        listaPersona = new ArrayList<>();
+        listaCliente = new ArrayList<>();
     }
     /**
      * Metodo que me permite crear una persona
      * @param persona 
      */
     
-    public void crear(Persona persona)
+    public void crear(Cliente cliente)
     {
-        listaPersona.add(persona); 
+        listaCliente.add(cliente); 
     }
 
-    public List<Persona> getListaPersona() {
-        return listaPersona;
+    public List<Cliente> getListaPersona() {
+        return listaCliente;
     }
 
-    public void setListaPersona(List<Persona> listaPersona) {
-        this.listaPersona = listaPersona;
-    }    
+    public void setListaPersona(List<Cliente> listaPersona) {
+        this.listaCliente = listaPersona;
+    } 
+    
 }

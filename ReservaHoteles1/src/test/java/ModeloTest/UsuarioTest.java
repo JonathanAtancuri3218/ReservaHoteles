@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scm.modelo;
+package ModeloTest;
 
+import Modelo.Usuario;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -34,32 +35,19 @@ public class UsuarioTest {
     @Before
     public void setUp() {
 
-        instance = new Usuario(0, "", "", "");
+       instance = new Usuario(0, "", "");
     }
 
     @After
     public void tearDown() {
     }
-
-    /**
-     * Test of getNombre method, of class Usuario.
-     */
-    @Test
-    public void testGetNombre() {
-
-        String expResult = "";
-        String result = instance.getNombre();
-        assertEquals(expResult, result);
-
-    }
-
     /**
      * Test of getClave method, of class Usuario.
      */
     @Test
     public void testGetClave() {
         String expResult = "";
-        String result = instance.getClave();
+        String result = instance.getContrasena();
         assertEquals(expResult, result);
 
     }

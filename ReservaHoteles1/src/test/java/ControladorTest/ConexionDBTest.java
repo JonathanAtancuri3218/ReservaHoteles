@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scm.controlador;
+package ControladorTest;
 
+import Controlador.ConexionDB;
 import java.sql.ResultSet;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,40 +1,53 @@
-package scm.modelo;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modelo;
 
 /**
  *
- * @author Jonathan Atancuri
+ * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
 public class Usuario {
-    
-    private int id;
-    private String nombre;
-    private String clave;
+    private int codigouser;
+    private String correo;
+    private String contrasena;
     private String rol;
 
-    public Usuario(int id, String nombre, String clave, String rol) {
-        this.id = id;
-        this.nombre = nombre;
-        this.clave = clave;
+    public Usuario(int codigouser, String contrasena, String rol) {
+        this.codigouser = codigouser;
+        this.contrasena = contrasena;
         this.rol = rol;
     }
 
-    public int getId() {
-        return id;
+    public Usuario(int i, String string, String string0, String string1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getCodigouser() {
+        return codigouser;
     }
 
-    public String getClave() {
-        return clave;
+    public void setCodigouser(int codigouser) {
+        this.codigouser = codigouser;
     }
 
-    public void setClave(String clave) {
-        this.clave = clave;
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getRol() {
         return rol;
     }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+    
+    
 }
