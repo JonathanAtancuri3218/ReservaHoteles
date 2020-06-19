@@ -1,5 +1,6 @@
 package scm.controlador;
 
+import Controlador.ConexionDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
