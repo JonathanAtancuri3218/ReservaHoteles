@@ -1,4 +1,4 @@
-package scm.modelo;
+package Modelo;
 
 /**
  *

@@ -1,4 +1,4 @@
-package scm.controlador;
+package Controlador;
 
 import Controlador.ConexionDB;
 import java.sql.ResultSet;
@@ -7,8 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import scm.modelo.Medico;
-import scm.modelo.Paciente;
 import scm.modelo.Persona;
 import scm.modelo.Usuario;
 
