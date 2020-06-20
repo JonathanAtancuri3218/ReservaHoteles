@@ -6,6 +6,7 @@
 package ControladorTest;
 
 import Controlador.ConexionDB;
+import Modelo.Usuario;
 import java.sql.ResultSet;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,7 +30,7 @@ public class ConexionDBTest {
      * Test of ejecutarSentencia method, of class ConexionDB.
      */
     @Test
-    public void testEjecutarSentencia() {
+    public void testEjecutarSentencia() throws ClassNotFoundException {
         boolean expResult = true;
         boolean result = ConexionDB.ejecutarSentencia("");
         assertEquals(expResult, result);
@@ -39,7 +40,7 @@ public class ConexionDBTest {
      * Test of ejecutarConsulta method, of class ConexionDB.
      */
     @Test
-    public void testEjecutarConsulta() {
+    public void testEjecutarConsulta() throws ClassNotFoundException {
         ResultSet expResult = null;
         ResultSet result = ConexionDB.ejecutarConsulta("");
         assertEquals(expResult, result);

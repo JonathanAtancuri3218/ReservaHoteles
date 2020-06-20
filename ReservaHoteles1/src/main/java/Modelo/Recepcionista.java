@@ -7,20 +7,21 @@ package Modelo;
  */
 public class Recepcionista extends Persona {
 
-    private int id;
-    
-    
+    private String codigo_recepcionista;
+
     public Recepcionista() {
-               
+    }
+    
+    public Recepcionista(String codigo_recepcionista) {
+        this.codigo_recepcionista = codigo_recepcionista;
     }
 
-    public int getId() {
-        return id;
+    public String getCodigo_cliente() {
+        return codigo_recepcionista;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCodigo_cliente(String codigo_recepcionista) {
+        this.codigo_recepcionista = codigo_recepcionista;
     }
-
     
 }

@@ -23,7 +23,7 @@ public class Gerente extends Persona{
         return codigo_gerente;
     }
 
-    public void setCodigo_cliente(String codigo_cliente) {
+    public void setCodigo_cliente(String codigo_gerente) {
         this.codigo_gerente = codigo_gerente;
     }
     
