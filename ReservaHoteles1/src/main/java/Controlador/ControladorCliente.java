@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 public class ControladorCliente {
 
     private ConexionDB mysql = new ConexionDB();
-    private Connection cn = mysql.ejecutarSentencia(mysql);
+    private Connection conectar = mysql.
 
     private String sSQL = "";
     private String sSQL2 = "";
