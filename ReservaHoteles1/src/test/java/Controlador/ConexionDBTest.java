@@ -44,15 +44,15 @@ public class ConexionDBTest {
     /**
      * Test of conectar method, of class ConexionDB.
      */
-    @Test
-    public void testConectar() {
-        System.out.println("conectar");
-        Connection expResult = null;
-        Connection result = ConexionDB.conectar();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testConectar() {
+//        System.out.println("conectar");
+//        Connection expResult = null;
+//        Connection result = ConexionDB.conectar();
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of ejecutarSentencia method, of class ConexionDB.
