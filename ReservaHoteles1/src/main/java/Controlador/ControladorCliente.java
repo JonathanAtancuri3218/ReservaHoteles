@@ -7,6 +7,7 @@ package Controlador;
 
 
 import Modelo.Cliente;
+import com.mysql.jdbc.MysqlIO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,11 +23,10 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
-public class ControladorCliente {
+public class ControladorCliente{
 
-    private ConexionDB mysql = new ConexionDB();
-    private Connection conectar = mysql.
-
+   ConexionDB mysql = new ConexionDB();
+   Connection cn =mysql.conectar();
     private String sSQL = "";
     private String sSQL2 = "";
     public Integer totalregistros;

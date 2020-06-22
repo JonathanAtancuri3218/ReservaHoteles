@@ -1,6 +1,7 @@
 
 package ControladorTest;
 
+import Controlador.ControladorUsuario;
 import Modelo.Usuario;
 import java.util.List;
 import org.junit.After;
@@ -40,7 +41,7 @@ public class ControladorUsuarioTest {
     @Test
     public void testAgregar() {
         System.out.println("agregando...");
-        Usuario usuario = new Usuario(10000, "", "", "");
+        Usuario usuario = new Usuario(20, "", "", "");
         boolean expResult = true;
         boolean result = ControladorUsuario.agregar(usuario);
         assertEquals(expResult, result);
@@ -60,7 +61,7 @@ public class ControladorUsuarioTest {
     @Test
     public void testModificar() {
         System.out.println("modificar");
-        Usuario usuario = new Usuario(10000,"","","");
+        Usuario usuario = new Usuario(20,"","","");
         boolean expResult = ControladorUsuario.modificar("UsuarioTest1", usuario);
         boolean result = ControladorUsuario.modificar("USR1_P4", usuario);
        

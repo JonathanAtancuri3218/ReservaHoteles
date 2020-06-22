@@ -6,6 +6,10 @@
 package Controlador;
 
 import Modelo.Usuario;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,16 +18,16 @@ import Modelo.Usuario;
 public class ControladorUsuario {
     
     public static int generarID() throws ClassNotFoundException {
-        String sql = "select max(id) from usuarios";
+        String sql = "select max(codigo) from usuarios";
         return ConexionDB.generarID(sql);
     }
     
     public static boolean agregar(Usuario usuario) {
-        if (buscar(usuario.g) == null) {
+        if (buscar(usuario.getNombre()) == null) {
             String sql = "insert into usuarios values(" +
-                      usuario.getId() + ", '" + 
+                      usuario.getCodigouser() + ", '" + 
                       usuario.getNombre() + "', '" +
-                      usuario.getClave() + "', '" +
+                      usuario.getContrasena() + "', '" +
                       usuario.getRol() + "')";
             ConexionDB.ejecutarSentencia(sql);
             return true;
@@ -35,9 +39,9 @@ public class ControladorUsuario {
         if (buscar(nombre) != null) {
             String sql = "update usuarios set " + 
                          "nombre = '" + usuario.getNombre() + "'," +
-                         "clave = '" + usuario.getClave() + "'," +
+                         "clave = '" + usuario.getContrasena()+ "'," +
                          "rol = '" + usuario.getRol() +"' " +  
-                         "where id = " + usuario.getId();
+                         "where id = " + usuario.getCodigouser();
             ConexionDB.ejecutarSentencia(sql);
             return true;
         }

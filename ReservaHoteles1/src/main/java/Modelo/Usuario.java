@@ -9,7 +9,7 @@ package Modelo;
  *
  * @author Ricardo Chuqui Andres Guaycha Jhonatan Atancuri Diego Castro
  */
-public class Usuario {
+public class Usuario extends Persona{
     private int codigouser;
     private String correo;
     private String contrasena;
