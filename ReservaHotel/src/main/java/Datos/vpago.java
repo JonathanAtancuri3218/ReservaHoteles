@@ -5,7 +5,7 @@ import java.sql.Date;
 
 /**
  *
- * @author CARLOS
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
  */
 public class vpago {
     private int idpago;

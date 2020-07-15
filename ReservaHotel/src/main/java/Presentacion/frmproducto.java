@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author CARLOS
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
  */
 public class frmproducto extends javax.swing.JInternalFrame {
 

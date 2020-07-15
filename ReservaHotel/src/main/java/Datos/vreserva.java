@@ -2,7 +2,10 @@
 package Datos;
 
 import java.sql.Date;
-
+/**
+ * 
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
+ */
 public class vreserva {
     private int idreserva;
     private int idhabitacion;

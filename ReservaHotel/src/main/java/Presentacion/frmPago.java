@@ -31,7 +31,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
- * @author CARLOS
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
  */
 public class frmPago extends javax.swing.JInternalFrame {
 

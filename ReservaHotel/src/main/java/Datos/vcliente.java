@@ -8,7 +8,7 @@ package Datos;
 
 /**
  *
- * @author CARLOS
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
  */
 public class vcliente extends vpersona{
     private String codigo_cliente;

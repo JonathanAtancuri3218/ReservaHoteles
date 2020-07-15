@@ -8,7 +8,7 @@ package Presentacion;
 
 /**
  *
- * @author CARLOS
+ * @author Jonathan Atancuri,Ricardo Chuqui,Diego Castro,Andres Guaicha
  */
 public class frminicio extends javax.swing.JFrame {
 
