@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Presentacion;
 
 import Datos.vtrabajador;
 import Logica.ftrabajador;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
-
-
 
 /**
  *
@@ -25,8 +24,9 @@ public class frmusuariologin extends javax.swing.JFrame {
      */
     public frmusuariologin() {
         initComponents();
-       this.setTitle("Acceso al Sistema");
-       this.setLocationRelativeTo(null);
+        this.setTitle("Acceso al Sistema");
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -59,7 +59,6 @@ public class frmusuariologin extends javax.swing.JFrame {
 
         btningresar.setBackground(new java.awt.Color(51, 0, 0));
         btningresar.setForeground(new java.awt.Color(255, 255, 255));
-        btningresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/guardar.png"))); // NOI18N
         btningresar.setText("Ingresar");
         btningresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +68,6 @@ public class frmusuariologin extends javax.swing.JFrame {
 
         btnsalir.setBackground(new java.awt.Color(51, 0, 0));
         btnsalir.setForeground(new java.awt.Color(255, 255, 255));
-        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/salir.gif"))); // NOI18N
         btnsalir.setText("Salir");
 
         tablalistado.setModel(new javax.swing.table.DefaultTableModel(
@@ -84,8 +82,6 @@ public class frmusuariologin extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(tablalistado);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/usuario.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -135,8 +131,8 @@ public class frmusuariologin extends javax.swing.JFrame {
                                     .addComponent(btnsalir)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -156,20 +152,20 @@ public class frmusuariologin extends javax.swing.JFrame {
     private void btningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btningresarActionPerformed
         // TODO add your handling code here:
         try {
+           
+                
             DefaultTableModel modelo;
-            ftrabajador func =new ftrabajador();
-            vtrabajador dts=new vtrabajador();
-            
-            
+            ftrabajador func = new ftrabajador();
+            vtrabajador dts = new vtrabajador();
+
             dts.setLogin(txtusuario.getText());
             dts.setPassword(txtpassword.getText());
-            
-            
-            modelo=func.login(dts.getLogin(),dts.getPassword());
-            
+
+            modelo = func.login(dts.getLogin(), dts.getPassword());
+
             tablalistado.setModel(modelo);
-            
-            if (func.totalregistros >0) {
+
+            if (func.totalregistros > 0) {
                 this.dispose();
                 frminicio form = new frminicio();
                 form.toFront();
@@ -183,17 +179,11 @@ public class frmusuariologin extends javax.swing.JFrame {
                     frminicio.mnuarchivo.setEnabled(false);
                     frminicio.mnuconfiguraciones.setEnabled(false);
                 }
-                
-                
-                
+
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Acceso Denegado", "Acceso al Sistema", JOptionPane.ERROR_MESSAGE);
             }
-            
-            else {
-                JOptionPane.showMessageDialog(rootPane, "Acceso Denegado","Acceso al Sistema",JOptionPane.ERROR_MESSAGE);
-            }
-            
-            
-            
+
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btningresarActionPerformed
@@ -229,6 +219,7 @@ public class frmusuariologin extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new frmusuariologin().setVisible(true);
+                
             }
         });
     }
@@ -245,4 +236,6 @@ public class frmusuariologin extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtpassword;
     private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
+    private ImageIcon image1, image2, image3;
+
 }
