@@ -5,106 +5,82 @@
     <artifactId>ReservaHotel</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
-  
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url> <!-- the https you've been looking for -->
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled> <!-- or set to true if desired, default is false -->
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
             <version>6.13.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.toedter/jcalendar -->
         <dependency>
             <groupId>com.toedter</groupId>
             <artifactId>jcalendar</artifactId>
             <version>1.4</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.23</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.8.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/commons-digester/commons-digester -->
         <dependency>
             <groupId>commons-digester</groupId>
             <artifactId>commons-digester</artifactId>
             <version>2.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-javaflow -->
+        <!-- https://mvnrepository.com/artifact/com.google.code.maven-play-plugin.org.apache.commons/commons-javaflow -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
+            <groupId>com.google.code.maven-play-plugin.org.apache.commons</groupId>
             <artifactId>commons-javaflow</artifactId>
-            <version>20160505</version>
+            <version>1590792</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <version>1.7.5</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts -->
+        <!-- https://mvnrepository.com/artifact/com.github.pokkie/jasperreports-fonts -->
         <dependency>
-            <groupId>net.sf.jasperreports</groupId>
+            <groupId>com.github.pokkie</groupId>
             <artifactId>jasperreports-fonts</artifactId>
-            <version>5.6.0</version>
+            <version>1.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.keypoint/png-encoder -->
+
         <dependency>
             <groupId>com.keypoint</groupId>
             <artifactId>png-encoder</artifactId>
             <version>1.5</version>
         </dependency>
-        <dependency>
-            <groupId>org.sonarsource.scanner.maven</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>3.7.0.1746</version>
-        </dependency>
+        
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>Presentacion.frmusuariologin</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
