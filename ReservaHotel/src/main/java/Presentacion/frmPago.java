@@ -75,17 +75,17 @@ public class frmPago extends javax.swing.JInternalFrame {
     }
 
     void ocultar_columnasconsumo() {
-        tablalistadoconsumo.getColumnModel().getColumn(0).setMaxWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(0).setMinWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(0).setPreferredWidth(0);
-        
-        tablalistadoconsumo.getColumnModel().getColumn(1).setMaxWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(1).setMinWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(1).setPreferredWidth(0);
-        
-        tablalistadoconsumo.getColumnModel().getColumn(2).setMaxWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(2).setMinWidth(0);
-        tablalistadoconsumo.getColumnModel().getColumn(2).setPreferredWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(0).setMaxWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(0).setMinWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(0).setPreferredWidth(0);
+//        
+//        tablalistadoconsumo.getColumnModel().getColumn(1).setMaxWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(1).setMinWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(1).setPreferredWidth(0);
+//        
+//        tablalistadoconsumo.getColumnModel().getColumn(2).setMaxWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(2).setMinWidth(0);
+//        tablalistadoconsumo.getColumnModel().getColumn(2).setPreferredWidth(0);
     }
     
     
@@ -153,13 +153,13 @@ public class frmPago extends javax.swing.JInternalFrame {
             lbltotalregistros.setText("Total Pagos " + Integer.toString(func.totalregistros));
             
             //Mostrar los datos de los consumos
-            fconsumo func2 = new fconsumo();
-            modelo= func2.mostrar(buscar);
-            tablalistadoconsumo.setModel(modelo);
-            ocultar_columnasconsumo();
-            
-            lbltotalregistrosconsumo.setText("Total Consumos " + func2.totalregistros);
-            lbltotalconsumo.setText("Consumo Total: $." + func2.totalconsumo );
+//            fconsumo func2 = new fconsumo();
+//            modelo= func2.mostrar(buscar);
+//            tablalistadoconsumo.setModel(modelo);
+//            ocultar_columnasconsumo();
+//            
+//            lbltotalregistrosconsumo.setText("Total Consumos " + func2.totalregistros);
+//            lbltotalconsumo.setText("Consumo Total: $." + func2.totalconsumo );
             
 
         } catch (Exception e) {
@@ -211,12 +211,6 @@ public class frmPago extends javax.swing.JInternalFrame {
         btnsalir = new javax.swing.JButton();
         lbltotalregistros = new javax.swing.JLabel();
         btnImprimirComprobante = new javax.swing.JButton();
-        btnImprimirComprobanteConsumo = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tablalistadoconsumo = new javax.swing.JTable();
-        lbltotalregistrosconsumo = new javax.swing.JLabel();
-        lbltotalconsumo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -474,31 +468,19 @@ public class frmPago extends javax.swing.JInternalFrame {
             }
         });
 
-        btnImprimirComprobanteConsumo.setBackground(new java.awt.Color(51, 51, 51));
-        btnImprimirComprobanteConsumo.setForeground(new java.awt.Color(255, 255, 255));
-        btnImprimirComprobanteConsumo.setText("Imprimir Consumos");
-        btnImprimirComprobanteConsumo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImprimirComprobanteConsumoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbltotalregistros, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnImprimirComprobante, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnImprimirComprobanteConsumo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                            .addComponent(btnImprimirComprobante, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btneliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnsalir)))
@@ -511,61 +493,11 @@ public class frmPago extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btneliminar)
                     .addComponent(btnsalir)
-                    .addComponent(btnImprimirComprobante)
-                    .addComponent(btnImprimirComprobanteConsumo))
+                    .addComponent(btnImprimirComprobante))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addComponent(lbltotalregistros))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Listado de Consumos"));
-
-        tablalistadoconsumo.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tablalistadoconsumo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablalistadoconsumoMouseClicked(evt);
-            }
-        });
-        jScrollPane4.setViewportView(tablalistadoconsumo);
-
-        lbltotalregistrosconsumo.setText("Registros");
-
-        lbltotalconsumo.setText("jLabel12");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbltotalconsumo)
-                        .addGap(48, 48, 48)
-                        .addComponent(lbltotalregistrosconsumo, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbltotalregistrosconsumo)
-                    .addComponent(lbltotalconsumo)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -575,13 +507,13 @@ public class frmPago extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txttotal_reserva, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txttotal_reserva, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -591,11 +523,8 @@ public class frmPago extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txttotal_reserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -777,10 +706,6 @@ public class frmPago extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txttotal_pagoActionPerformed
 
-    private void tablalistadoconsumoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoconsumoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tablalistadoconsumoMouseClicked
-
     private Connection connection=new conexion().conectar();
     
     
@@ -805,27 +730,6 @@ public class frmPago extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_btnImprimirComprobanteActionPerformed
-
-    private void btnImprimirComprobanteConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirComprobanteConsumoActionPerformed
-        if (!txtidpago.getText().equals("")) {
-            Map p = new HashMap();
-            p.put("idpago", txtidpago.getText());
-            JasperReport report;
-            JasperPrint print;
-
-            try {
-                report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
-                        + "/src/Reportes/rptComprobanteConsumo.jrxml");
-                print = JasperFillManager.fillReport(report, p, connection);
-                JasperViewer view = new JasperViewer(print, false);
-                view.setTitle("Comprobante");
-                view.setVisible(true);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }//GEN-LAST:event_btnImprimirComprobanteConsumoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -864,7 +768,6 @@ public class frmPago extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnImprimirComprobante;
-    private javax.swing.JButton btnImprimirComprobanteConsumo;
     private javax.swing.JButton btncancelar;
     private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnguardar;
@@ -884,14 +787,9 @@ public class frmPago extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JLabel lbltotalconsumo;
     private javax.swing.JLabel lbltotalregistros;
-    private javax.swing.JLabel lbltotalregistrosconsumo;
     private javax.swing.JTable tablalistado;
-    private javax.swing.JTable tablalistadoconsumo;
     private javax.swing.JTextField txtcliente;
     private javax.swing.JTextField txthabitacion;
     private javax.swing.JTextField txtidhabitacion;

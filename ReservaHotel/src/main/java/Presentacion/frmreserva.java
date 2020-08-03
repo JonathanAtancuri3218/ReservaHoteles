@@ -191,7 +191,6 @@ public class frmreserva extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
         lbltotalregistros = new javax.swing.JLabel();
-        btnverconsumo = new javax.swing.JButton();
         btnrealizarpagos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -503,13 +502,6 @@ public class frmreserva extends javax.swing.JInternalFrame {
 
         lbltotalregistros.setText("Registros");
 
-        btnverconsumo.setText("Consumos");
-        btnverconsumo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnverconsumoActionPerformed(evt);
-            }
-        });
-
         btnrealizarpagos.setText("Realizar Pagos");
         btnrealizarpagos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -525,15 +517,14 @@ public class frmreserva extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnverconsumo, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
+                                .addGap(207, 207, 207)
                                 .addComponent(btnrealizarpagos, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbltotalregistros, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -543,7 +534,7 @@ public class frmreserva extends javax.swing.JInternalFrame {
                                 .addComponent(btneliminar)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnsalir)))
-                        .addGap(0, 179, Short.MAX_VALUE)))
+                        .addGap(0, 184, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -557,11 +548,10 @@ public class frmreserva extends javax.swing.JInternalFrame {
                     .addComponent(btneliminar)
                     .addComponent(btnsalir))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
                 .addGap(5, 5, 5)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbltotalregistros)
-                    .addComponent(btnverconsumo)
                     .addComponent(btnrealizarpagos)))
         );
 
@@ -803,19 +793,6 @@ public class frmreserva extends javax.swing.JInternalFrame {
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscaclienteActionPerformed
 
-    private void btnverconsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnverconsumoActionPerformed
-        // TODO add your handling code here:
-        int fila = tablalistado.getSelectedRow();
-        frmConsumo.idreserva= tablalistado.getValueAt(fila, 0).toString();
-        frmConsumo.cliente=tablalistado.getValueAt(fila, 4).toString();
-        
-        
-        frmConsumo form = new frmConsumo();
-        frminicio.escritorio.add(form);
-        form.toFront();
-        form.setVisible(true);
-    }//GEN-LAST:event_btnverconsumoActionPerformed
-
     private void btnrealizarpagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrealizarpagosActionPerformed
         // TODO add your handling code here:
         int fila = tablalistado.getSelectedRow();
@@ -881,7 +858,6 @@ public class frmreserva extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnnuevo;
     private javax.swing.JButton btnrealizarpagos;
     private javax.swing.JButton btnsalir;
-    private javax.swing.JButton btnverconsumo;
     private javax.swing.JComboBox cboestado;
     private javax.swing.JComboBox cbotipo_reserva;
     private com.toedter.calendar.JDateChooser dcfecha_ingresa;
